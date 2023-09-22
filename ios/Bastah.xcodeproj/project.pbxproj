@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BastahTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BastahTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-Bastah.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Bastah.a */; };
+		103EEE25ECEA4B308ACAA31D /* ReadexPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EE41D6077FD43AF87B8D3B4 /* ReadexPro-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1FB5D6B02ABDD40100EAE1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FB5D6AF2ABDD40100EAE1C0 /* GoogleService-Info.plist */; };
+		3DA6D814926B4F148F4818F7 /* ReadexPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E41CCBC2849E08CAD7E5C /* ReadexPro-ExtraLight.ttf */; };
+		5356C9086B6045E2BB62E49C /* ReadexPro-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0001192E5CF645E99CA06ABA /* ReadexPro-bold.ttf */; };
+		6979CCC174884A71AB22682C /* ReadexPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77D1A05CE2D84841A3599D8A /* ReadexPro-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-Bastah-BastahTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Bastah-BastahTests.a */; };
+		7B2CA26B159644B99A6BE19B /* ReadexPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5260AC4DAEBC434EBA233CCA /* ReadexPro-Medium.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D9B103C066EA45988EE23AF2 /* ReadexPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 236612B149A3432EA89FB17A /* ReadexPro-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0001192E5CF645E99CA06ABA /* ReadexPro-bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-bold.ttf"; path = "../assets/fonts/ReadexPro-bold.ttf"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* BastahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BastahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BastahTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BastahTests.m; sourceTree = "<group>"; };
@@ -40,12 +47,17 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Bastah-BastahTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bastah-BastahTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4DF3D02ABDD8A90025C684 /* Bastah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Bastah.entitlements; path = Bastah/Bastah.entitlements; sourceTree = "<group>"; };
 		1FB5D6AF2ABDD40100EAE1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		236612B149A3432EA89FB17A /* ReadexPro-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-Light.ttf"; path = "../assets/fonts/ReadexPro-Light.ttf"; sourceTree = "<group>"; };
+		2EE41D6077FD43AF87B8D3B4 /* ReadexPro-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-Regular.ttf"; path = "../assets/fonts/ReadexPro-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Bastah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bastah.debug.xcconfig"; path = "Target Support Files/Pods-Bastah/Pods-Bastah.debug.xcconfig"; sourceTree = "<group>"; };
+		5260AC4DAEBC434EBA233CCA /* ReadexPro-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-Medium.ttf"; path = "../assets/fonts/ReadexPro-Medium.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Bastah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bastah.release.xcconfig"; path = "Target Support Files/Pods-Bastah/Pods-Bastah.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Bastah-BastahTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bastah-BastahTests.debug.xcconfig"; path = "Target Support Files/Pods-Bastah-BastahTests/Pods-Bastah-BastahTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Bastah.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bastah.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D1A05CE2D84841A3599D8A /* ReadexPro-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-SemiBold.ttf"; path = "../assets/fonts/ReadexPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Bastah/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Bastah-BastahTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bastah-BastahTests.release.xcconfig"; path = "Target Support Files/Pods-Bastah-BastahTests/Pods-Bastah-BastahTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C3E41CCBC2849E08CAD7E5C /* ReadexPro-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ReadexPro-ExtraLight.ttf"; path = "../assets/fonts/ReadexPro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -111,6 +123,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		688D1FCC828D4E6B8D35C03B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C3E41CCBC2849E08CAD7E5C /* ReadexPro-ExtraLight.ttf */,
+				236612B149A3432EA89FB17A /* ReadexPro-Light.ttf */,
+				5260AC4DAEBC434EBA233CCA /* ReadexPro-Medium.ttf */,
+				2EE41D6077FD43AF87B8D3B4 /* ReadexPro-Regular.ttf */,
+				77D1A05CE2D84841A3599D8A /* ReadexPro-SemiBold.ttf */,
+				0001192E5CF645E99CA06ABA /* ReadexPro-bold.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +153,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				688D1FCC828D4E6B8D35C03B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -251,6 +278,12 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				1FB5D6B02ABDD40100EAE1C0 /* GoogleService-Info.plist in Resources */,
+				3DA6D814926B4F148F4818F7 /* ReadexPro-ExtraLight.ttf in Resources */,
+				D9B103C066EA45988EE23AF2 /* ReadexPro-Light.ttf in Resources */,
+				7B2CA26B159644B99A6BE19B /* ReadexPro-Medium.ttf in Resources */,
+				103EEE25ECEA4B308ACAA31D /* ReadexPro-Regular.ttf in Resources */,
+				6979CCC174884A71AB22682C /* ReadexPro-SemiBold.ttf in Resources */,
+				5356C9086B6045E2BB62E49C /* ReadexPro-bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

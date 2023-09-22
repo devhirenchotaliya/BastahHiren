@@ -176,6 +176,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: "700",
+    fontFamily: "ReadexPro-bold",
   },
 });
 

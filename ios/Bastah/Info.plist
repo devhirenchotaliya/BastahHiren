@@ -20,6 +20,19 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>GOOGLE_LOGIN_REVERSED_CLIENT_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.526631932163-dji1ls4pgtgn1k2854bemsm6mjbooupb</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -36,7 +49,15 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
+	<key>NSCameraUsageDescription</key>
+	<string>Update your profile picture using the camera</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location is required to find out where you are</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location is required to find out where you are</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Update your profile picture using the photo library</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -56,5 +77,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ReadexPro-ExtraLight.ttf</string>
+		<string>ReadexPro-Light.ttf</string>
+		<string>ReadexPro-Medium.ttf</string>
+		<string>ReadexPro-Regular.ttf</string>
+		<string>ReadexPro-SemiBold.ttf</string>
+		<string>ReadexPro-bold.ttf</string>
+	</array>
 </dict>
 </plist>
