@@ -10,7 +10,7 @@
 
 import { Provider } from "react-redux";
 import React, { useEffect } from "react";
-// import SplashScreen from "react-native-splash-screen";
+import SplashScreen from "react-native-splash-screen";
 import { LogBox, StatusBar, StyleSheet, View } from "react-native";
 
 import store from "./src/redux";
@@ -31,7 +31,7 @@ const App = () => {
   useEffect(() => {
     requestNotificationUserPermission();
     setTimeout(() => {
-      // SplashScreen.hide();
+      SplashScreen.hide();
     }, 1100);
     LogBox.ignoreAllLogs(true);
   }, []);
