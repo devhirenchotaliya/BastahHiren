@@ -2,182 +2,56 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
+ * Generated with the TypeScript template
+ * https://github.com/react-native-community/react-native-template-typescript
+ *
  * @format
  */
 
+import { Provider } from "react-redux";
 import React, { useEffect } from "react";
-import type { PropsWithChildren } from "react";
+// import SplashScreen from "react-native-splash-screen";
+import { LogBox, StatusBar, StyleSheet, View } from "react-native";
+
+import store from "./src/redux";
+import { colors } from "./src/theme/Colors";
+import { ToastMsg } from "./src/components";
+import MainNavigator from "./src/navigations/MainNavigator";
+import { StripeProvider } from "@stripe/stripe-react-native";
 import {
-  Alert,
-  PermissionsAndroid,
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from "react-native";
+  APPLE_MERCHANT_ID,
+  STRIPE_PUBLIC_KEY,
+} from "./src/helper/apiConstants";
+import { requestNotificationUserPermission } from "./src/helper/firebaseConfig";
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from "react-native/Libraries/NewAppScreen";
-import messaging from "@react-native-firebase/messaging";
+// you can used this version of carousel
+// "react-native-snap-carousel": "4.0.0-beta.6",
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({ children, title }: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === "dark";
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}
-      >
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === "dark";
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+const App = () => {
   useEffect(() => {
     requestNotificationUserPermission();
+    setTimeout(() => {
+      // SplashScreen.hide();
+    }, 1100);
+    LogBox.ignoreAllLogs(true);
   }, []);
 
-  async function requestNotificationUserPermission() {
-    // if (Platform.OS === "android") {
-    //   PermissionsAndroid.request(
-    //     PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS
-    //   );
-    // }
-    const authStatus = await messaging().requestPermission();
-    const enabled =
-      authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-      authStatus === messaging.AuthorizationStatus.PROVISIONAL;
-
-    if (enabled) {
-      if (authStatus === 1) {
-        if (Platform.OS === "ios") {
-          // await messaging()
-          //   .registerDeviceForRemoteMessages()
-          //   .then(async () => {
-          //     getFirebaseToken();
-          //   })
-          //   .catch(() => {});
-          getFirebaseToken();
-        } else {
-          getFirebaseToken();
-        }
-      } else {
-        await messaging().requestPermission();
-      }
-    } else {
-      await messaging().requestPermission();
-      console.log("Please allow to notifications permission");
-    }
-  }
-
-  const getFirebaseToken = async () => {
-    await messaging()
-      .getToken()
-      .then((fcmToken) => {
-        if (fcmToken) {
-          console.log("---fcmToken---", fcmToken);
-          Alert.alert("FCM", fcmToken?.toString());
-          // infoToast(fcmToken);
-        } else {
-          console.log("[FCMService] User does not have a device token");
-        }
-      })
-      .catch((error) => {
-        let err = `FCm token get error${error}`;
-        console.log(err);
-        alert(err?.toString());
-      });
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? "light-content" : "dark-content"}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
+    <Provider store={store}>
+      <StripeProvider
+        publishableKey={STRIPE_PUBLIC_KEY}
+        merchantIdentifier={APPLE_MERCHANT_ID} // required for Apple Pay
       >
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+        <View style={{ flex: 1 }}>
+          <StatusBar backgroundColor={colors.white} barStyle={"dark-content"} />
+          <MainNavigator />
+          <ToastMsg />
         </View>
-      </ScrollView>
-    </SafeAreaView>
+      </StripeProvider>
+    </Provider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: "600",
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: "400",
-  },
-  highlight: {
-    fontWeight: "700",
-    fontFamily: "ReadexPro-bold",
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;
