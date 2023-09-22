@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "526631932163",
+    "project_id": "bastah-506b5",
+    "storage_bucket": "bastah-506b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526631932163:android:6fe519c29e70875ff69936",
+        "android_client_info": {
+          "package_name": "com.app.bastah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526631932163-e2g9t1qhdirtecpp766lqe791g1a8s84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.bastah",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "526631932163-b85he687v4kb3l89variiacc6eiphmdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV82O_YOH1uwX70S46eMQs3QfWa0YSX3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526631932163-5b1j10722emcjo258o9cg34j99mne7lt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "526631932163-dji1ls4pgtgn1k2854bemsm6mjbooupb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.bastah",
+                "app_store_id": "6463001713"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
