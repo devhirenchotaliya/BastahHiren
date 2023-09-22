@@ -1,4 +1,4 @@
-package com.bastah;
+package com.app.bastah;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

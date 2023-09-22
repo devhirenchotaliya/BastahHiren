@@ -1,5 +1,5 @@
 {
-  "name": "Bastah",
+  "name": "bastah",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-native-firebase/app": "^18.4.0",
+    "@react-native-firebase/auth": "^18.4.0",
+    "@react-native-firebase/messaging": "^18.4.0",
     "react": "18.2.0",
     "react-native": "0.72.4"
   },

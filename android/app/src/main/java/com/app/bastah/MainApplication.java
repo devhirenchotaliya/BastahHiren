@@ -1,4 +1,4 @@
-package com.bastah;
+package com.app.bastah;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
