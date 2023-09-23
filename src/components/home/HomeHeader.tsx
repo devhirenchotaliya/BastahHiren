@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     width: wp(25),
   },
   countStyle: {
-    height: hp(13),
+    height: wp(13),
     width: wp(13),
     backgroundColor: colors.brown,
     position: "absolute",

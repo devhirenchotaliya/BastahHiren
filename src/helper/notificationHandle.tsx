@@ -39,6 +39,10 @@ export const onMessage = () => {
   return unsubscribe;
 };
 
+export const onMessageReceived = (remoteMessage: any) => {
+  onDisplayNotification(remoteMessage);
+};
+
 async function onDisplayNotification(message: any) {
   await notifee.requestPermission();
   const channelId = await notifee.createChannel({
@@ -89,6 +93,19 @@ export const openAppNotifiactionEvent = async () => {
         break;
       case EventType.PRESS:
         console.log("User pressed notification", detail.notification);
+        if (detail.notification?.data?.order_id) {
+          if (detail.notification?.data?.status === "Delivered") {
+            //@ts-ignore
+            navigationRef.current?.navigate(screenName.add_review, {
+              order_id: detail.notification?.data?.order_id,
+            });
+          } else {
+            //@ts-ignore
+            navigationRef.current?.navigate(screenName.order_details, {
+              order_id: detail.notification?.data?.order_id,
+            });
+          }
+        }
         if (orderData?.order_id) {
           if (orderData?.status === "Delivered") {
             //@ts-ignore

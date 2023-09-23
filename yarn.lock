@@ -6283,10 +6283,10 @@ react-native-device-info@^10.11.0:
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-10.11.0.tgz#2c9f378f1c3c5eb9aafa803d015b84325991a9aa"
   integrity sha512-qRzhuYOm5ZXQi5dhfJFjDq157oipxcEW/fo0QyMm5+TI6V6/+P/tju+Hif6z0rpLCf7MV7iDVRv2Kqha4D/yvQ==
 
-react-native-drop-shadow@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/react-native-drop-shadow/-/react-native-drop-shadow-0.0.9.tgz#93765b23b7cd260ca16e01c352631753026a3553"
-  integrity sha512-XVU/E2yHuYdAsjippzgGMO/kDaPFbx5iSPJrQuN/a5WCPuS2xuRjHFu0wuhpRHGhfMCiZdBFXlKx9QNo65tDXA==
+react-native-drop-shadow@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-drop-shadow/-/react-native-drop-shadow-0.0.8.tgz#7c613a9d52072735fc0a4e3e41081eab5d781137"
+  integrity sha512-CV3gXhq/LuhldBDHFfQEmlnlvpmenevLq6IvZFFnTOYJDqXz9IWqQfZ+sL7abGHkVPhrLfbpzI3UgMB0+Pt8Vg==
 
 react-native-element-dropdown@^2.10.0:
   version "2.10.0"

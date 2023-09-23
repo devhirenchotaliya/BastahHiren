@@ -11,6 +11,7 @@ import { icons } from "../../theme/Icons";
 import { useNavigation } from "@react-navigation/native";
 import { useAppDispatch } from "../../redux/hooks";
 import { clearSellerProfile } from "../../actions";
+import FastImage from "react-native-fast-image";
 
 const BusinessesItem = ({
   avgRate,
@@ -40,10 +41,11 @@ const BusinessesItem = ({
     >
       <View style={styles.innerContainer}>
         <View style={{ ...styles.rowStyle, flex: 1 }}>
-          <Image
+          <FastImage
             resizeMode="cover"
             source={{
               uri: image,
+              priority: FastImage.priority.normal,
             }}
             style={styles.imgStyle}
           />

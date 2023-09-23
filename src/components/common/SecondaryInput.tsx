@@ -96,7 +96,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   mapContainer: {
-    height: hp(117),
     borderWidth: 1.5,
     marginTop: hp(20),
     borderRadius: wp(10),

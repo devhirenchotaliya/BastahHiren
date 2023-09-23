@@ -1,12 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import {
-  FlatList,
-  Keyboard,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
 import { colors } from "../../theme/Colors";
 import { BusinessesItem, NoDataFound, SearchBar } from "../../components";
 import { getText, hp, wp } from "../../helper/globalFunctions";
