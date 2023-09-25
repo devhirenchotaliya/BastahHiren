@@ -6,6 +6,8 @@ import {
   getAsyncNotifiactionData,
   setAsyncNotifiactionData,
 } from "./asyncStorage";
+import { Platform } from "react-native";
+import { order_status } from "./globalFunctions";
 
 export const onNotificationPress = () => {
   messaging()
@@ -31,15 +33,18 @@ export const onBackgroundNotificationPress = () => {
 };
 
 export const onMessage = () => {
-  const unsubscribe = messaging().onMessage(async (remoteMessage) => {
-    console.log("A new FCM message arrived! ACTIVE APP", remoteMessage);
-    setAsyncNotifiactionData(remoteMessage?.data);
-    onDisplayNotification(remoteMessage);
-  });
-  return unsubscribe;
+  if (Platform.OS === "android") {
+    const unsubscribe = messaging().onMessage(async (remoteMessage) => {
+      console.log("A new FCM message arrived! ACTIVE APP", remoteMessage);
+      setAsyncNotifiactionData(remoteMessage?.data);
+      onDisplayNotification(remoteMessage);
+    });
+    return unsubscribe;
+  }
 };
 
 export const onMessageReceived = (remoteMessage: any) => {
+  setAsyncNotifiactionData(remoteMessage?.data);
   onDisplayNotification(remoteMessage);
 };
 
@@ -66,11 +71,10 @@ async function onDisplayNotification(message: any) {
 export const navigateToOrderDetails = (remoteMessage: any) => {
   if (remoteMessage?.data?.order_id) {
     console.log("remoteMessage?.data", remoteMessage?.data);
-
     let order_id = remoteMessage?.data?.order_id;
     let status = remoteMessage?.data?.status;
     setTimeout(() => {
-      if (status === "Delivered") {
+      if (status === order_status.delivered) {
         // @ts-ignore
         navigationRef.current?.navigate(screenName.add_review, {
           order_id,
@@ -93,8 +97,9 @@ export const openAppNotifiactionEvent = async () => {
         break;
       case EventType.PRESS:
         console.log("User pressed notification", detail.notification);
+        // for ios only
         if (detail.notification?.data?.order_id) {
-          if (detail.notification?.data?.status === "Delivered") {
+          if (detail.notification?.data?.status === order_status.delivered) {
             //@ts-ignore
             navigationRef.current?.navigate(screenName.add_review, {
               order_id: detail.notification?.data?.order_id,
@@ -106,8 +111,9 @@ export const openAppNotifiactionEvent = async () => {
             });
           }
         }
+        // foe android only
         if (orderData?.order_id) {
-          if (orderData?.status === "Delivered") {
+          if (orderData?.status === order_status.delivered) {
             //@ts-ignore
             navigationRef.current?.navigate(screenName.add_review, {
               order_id: orderData?.order_id,

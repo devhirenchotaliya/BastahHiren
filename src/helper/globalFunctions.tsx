@@ -126,23 +126,33 @@ export const getPaymentMethodWiseIcon = (pay_method: string) => {
 
 export const getStatusColor = (status: string) => {
   switch (status) {
-    case "Submitted":
+    case order_status.submitted:
       return "#C1A185";
-    case "Cancelled":
+    case order_status.cancelled:
       return "#E94E4E";
-    case "Completed":
+    case order_status.completed:
       return "#4FB87F";
-    case "Fullfilled":
+    case order_status.fulfilled:
       return "#fcdd7e";
-    case "Dispatched":
+    case order_status.dispatched:
       return "#fa9b02";
-    case "Confirmed":
+    case order_status.confirmed:
       return "#1ce879";
-    case "Delivered":
+    case order_status.delivered:
       return "#2e8a15";
     default:
       break;
   }
+};
+
+export const order_status = {
+  submitted: "Submitted",
+  cancelled: "Cancelled",
+  fulfilled: "Fulfilled",
+  completed: "Completed",
+  dispatched: "Dispatched",
+  confirmed: "Confirmed",
+  delivered: "Delivered",
 };
 
 export function getFormData(object: any) {
